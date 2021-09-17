@@ -1,19 +1,25 @@
 import React, { useState } from 'react'
+import { useHistory } from "react-router-dom";
+import useData from '../DataFetching/dataFetching';
 
 import './homePage.css'
 
 function HomePage() {
     const [input, setInput] = useState('');
+    const [userData, setUserName] = useData();
     let [checkInput, setCheckInput] = useState({empty:false, color: ''});
-
+    
+    let history = useHistory();
 
     const inputChangeHandler=(e)=>{
         let value = (e.target.value).trim();
         setInput(value);
+        setUserName(value);
     }
 
     const searchHandler=()=>{
         if((input).length >=1 && input.match('^[A-Za-z0-9@_-]*$')){
+            history.push({pathname: "/detail", state: userData});
             checkInput={
                 empty: false,
                 color: ''
