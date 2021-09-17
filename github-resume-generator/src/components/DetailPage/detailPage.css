@@ -7,12 +7,17 @@ nav{
 .hire__button{
     width: 8rem;
     height: 2.6rem;
+    padding: 1px;
     border: none;
     color: white;
     font-size: 1rem;
     align-self: center;
-    background-color: orangered;
+    border-radius: 6px;
+    background: #F24E1E;
+    box-sizing: border-box;
+    border: 1px solid #F24E1E;
 }
+
 .hire__button:hover{
     cursor: pointer;
     color: orangered;
@@ -22,14 +27,17 @@ nav{
 .details__container{
     padding: 2rem 4rem;
     position: relative;
+    
 }
 
 .detail__container{
+    border: 2px solid black;
     padding: 4.6rem 2.6rem 2.6rem 2.6rem;
 }
 
 .back__image{
     width: 2rem;
+    margin-left: 0px;
 }
 
 .back__image :hover{
@@ -41,20 +49,37 @@ nav{
 }
 
 .avatar__image{
-    left: 43%;
-    top: 1rem;
-    width: 7rem;
+    left: 40%;
+    width: 10rem;
+    bottom : 38rem;
     position:absolute;
+   
 
 }
 
 .avatar__image img{
     width: 100%;
     border-radius: 50%;
+    border: 2px solid black;
 }
 
 .name{
+    font-size: 36px;
+    color: #000000;
+    line-height: 42px;
+    font-weight: bold;
+    font-style: normal;
     margin-bottom: 0px;
+    font-family: Roboto;
+}
+
+.sub__name{
+    font-size: 24px;
+    color: #343333;
+    line-height: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-family: Roboto;
 }
 
 main{
@@ -70,17 +95,24 @@ main{
 
 .followers__section p:nth-child(1){
     margin: 0px;
-    font-size: 2rem;
+    font-size: 36px;
+    color: #2D2C2C;
+    line-height: 42px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Roboto;
     font-family: 'Rubik', sans-serif;
 }
 
 .button{
-    font-size: 1rem;
+    color: #000000;
+    font-size: 18px;
     padding: 4px 1rem;
-    background-color: rgb(240, 236, 236);
+    border-radius: 3px;
+    background: rgba(196, 196, 196, 0.35);
 }
 
-.abc{
+.personal-info__container{
     gap: 1rem;
     display: flex;
     margin: 0rem 3rem ;
@@ -99,11 +131,20 @@ main{
 }
 
 .info__container p:nth-child(odd){
-    color: rgb(133, 130, 130);
+    font-size: 14px;
+    color: #7E7E7E;
+    font-style: normal;
+    font-family: Roboto;
+    font-weight: normal;
 }
 
 .info__container p:nth-child(even){
+    font-size: 18px;
+    color: #000000;
     font-weight: bold;
+    font-weight: bold;
+    font-style: normal;
+    font-family: Roboto;
     padding-bottom: 1rem;
 }
 
@@ -120,10 +161,19 @@ main{
 }
 
 .bio p{
+    font-size: 14px;
+    color: #2D2C2C;
+    font-style: normal;
     margin-bottom: 0px;
+    font-family: Roboto;
+    font-weight: normal;
 }
 
 .bio__title{
+    font-size: 18px;
+    color: #2D2C2C;
     font-weight: bold;
+    font-style: normal;
+    font-family: Roboto;
 }
 

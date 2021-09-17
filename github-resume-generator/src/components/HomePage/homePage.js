@@ -32,7 +32,7 @@ function HomePage() {
                 empty: true,
                 color: 'red'
             }
-
+            alert("Wrong input");
             setCheckInput(checkInput);
         }
     }

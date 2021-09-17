@@ -1,12 +1,12 @@
-import DetailPage from './components/DetailPage/detailPage';
+import Page404 from './components/404Page/page404';
 import HomePage from './components/HomePage/homePage';
+import DetailPage from './components/DetailPage/detailPage';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import Page404 from './components/404Page/page404';
 
 
 function App() {

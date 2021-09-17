@@ -18,8 +18,6 @@ function DetailPage() {
         public_repos, email, 
         followers, following} = location.state
 
-    console.log("->",company);
-
     const getDate=()=>{
         var date = created_at;
         date = date.substring(0,10);
@@ -58,7 +56,8 @@ function DetailPage() {
                     <img src={avatar_url} alt="avatar" />
                 </figure>
                 <h1 className='name'>{(name)? name: login}</h1>
-                <p>@{login}</p>
+                <p className='sub__name'>@{login}</p>
+                
                 <section className="followers__section">
                     <span>
                         <p>{followers}</p>
@@ -74,11 +73,11 @@ function DetailPage() {
                     </span>
                 </section>
                 
-                <section className='abc'>
+                <section className='personal-info__container'>
                     <div className="info__container">
                         <span>
                             <p className='info__title'>Email</p>
-                            <p>{(email)? email : 'xyz@gmail.ccom'}</p>
+                            <p>{(email)? email : 'NULL'}</p>
                             <p className='info__title'>Location</p>
                             <p>{(location.state.location)?location.state.location: 'Nepal'}</p>
                             <p className='info__title'>Twiteer</p>
