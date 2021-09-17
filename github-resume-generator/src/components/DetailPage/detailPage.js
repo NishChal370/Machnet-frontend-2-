@@ -3,6 +3,12 @@ import { useHistory } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 
 import './detailPage.css'
+import { AiOutlineMail } from 'react-icons/ai';
+import {GrOrganization} from 'react-icons/gr';
+import {GoLocation} from 'react-icons/go';
+import {MdDateRange} from 'react-icons/md';
+import {FaInternetExplorer} from 'react-icons/fa'
+
 import backImg from '../../images/backArrow.png'
 
 function DetailPage() {
@@ -19,7 +25,7 @@ function DetailPage() {
         followers, following} = location.state
 
     const getDate=()=>{
-        var date = created_at;
+        let date = created_at;
         date = date.substring(0,10);
         let day = date.substring(8,10);
         let year = date.substring(0,4);
@@ -76,19 +82,19 @@ function DetailPage() {
                 <section className='personal-info__container'>
                     <div className="info__container">
                         <span>
-                            <p className='info__title'>Email</p>
+                            <p className='info__title'><AiOutlineMail/>Email</p>
                             <p>{(email)? email : 'NULL'}</p>
-                            <p className='info__title'>Location</p>
+                            <p className='info__title'><GoLocation/>Location</p>
                             <p>{(location.state.location)?location.state.location: 'Nepal'}</p>
                             <p className='info__title'>Twiteer</p>
                             <p>{(twiteer_username)?twiteer_username:login}</p>
                         </span>
                         <span>
-                            <p className='info__title'>Orgainzation</p>
+                            <p className='info__title'><GrOrganization/>Orgainzation</p>
                             <p>{(company)?company: 'NULL'}</p>
-                            <p className='info__title'>Joined Date</p>
+                            <p className='info__title'><MdDateRange/>Joined Date</p>
                             <p className='info__title'>{getDate()}</p>
-                            <p className='info__title'>Website</p>
+                            <p className='info__title'><FaInternetExplorer/>Website</p>
                             <p className='info__title'>github.com</p>
                         </span>
                     </div>
