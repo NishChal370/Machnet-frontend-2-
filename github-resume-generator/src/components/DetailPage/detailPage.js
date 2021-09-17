@@ -18,6 +18,8 @@ function DetailPage() {
         public_repos, email, 
         followers, following} = location.state
 
+    console.log("->",company);
+
     const getDate=()=>{
         var date = created_at;
         date = date.substring(0,10);
@@ -29,13 +31,26 @@ function DetailPage() {
         return date;
     }
 
+    const showHireHandler=()=>{
+        if(company === null){
+            return true
+        }
+        else{
+            return false
+        }
+    }
+
     return (
         <div className="details__container">
             <nav>
                 <figure className='back__image' onClick={()=> history.goBack()}>
                     <img src={backImg} alt="backButton" />
                 </figure>
-                <button className='hire__button'>Hire Me</button>
+                {
+                    (showHireHandler())
+                        ? <button className='hire__button'>Hire Me</button>
+                        : ''
+                }
             </nav>
             
             <main className="detail__container">
@@ -71,7 +86,7 @@ function DetailPage() {
                         </span>
                         <span>
                             <p className='info__title'>Orgainzation</p>
-                            <p>{(company)?company: 'Github Inc.'}</p>
+                            <p>{(company)?company: 'NULL'}</p>
                             <p className='info__title'>Joined Date</p>
                             <p className='info__title'>{getDate()}</p>
                             <p className='info__title'>Website</p>
